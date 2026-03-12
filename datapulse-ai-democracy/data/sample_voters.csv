@@ -1,0 +1,46 @@
+Name,Age,Gender,BoothID,Area,Occupation,Experience
+Ramesh Kumar,45,Male,B001,Rural,Farmer,20
+Priya Sharma,22,Female,B002,Urban,Student,0
+Suresh Patel,67,Male,B001,Rural,Farmer,40
+Anita Devi,35,Female,B003,Rural,Farmer,15
+Vikram Singh,28,Male,B002,Urban,Engineer,5
+Kavita Joshi,72,Female,B001,Rural,Retired,45
+Rajesh Gupta,55,Male,B003,Rural,Farmer,30
+Deepa Nair,19,Female,B002,Urban,Student,0
+Mohan Reddy,62,Male,B001,Rural,Farmer,35
+Sneha Iyer,31,Female,B003,Urban,Teacher,8
+Arun Pillai,48,Male,B002,Rural,Farmer,25
+Lakshmi Menon,68,Female,B001,Rural,Retired,40
+Karthik Rao,25,Male,B002,Urban,Developer,3
+Meera Krishnan,42,Female,B003,Rural,Farmer,20
+Gopal Sharma,70,Male,B001,Rural,Retired,50
+Sunita Verma,29,Female,B002,Urban,Nurse,6
+Venkatesh Iyengar,52,Male,B003,Rural,Farmer,28
+Pooja Bhat,21,Female,B002,Urban,Student,0
+Srinivas Murthy,65,Male,B001,Rural,Retired,42
+Rekha Venkat,38,Female,B003,Rural,Farmer,18
+Naveen Kumar,26,Male,B002,Urban,Accountant,4
+Indira Govind,71,Female,B001,Rural,Retired,48
+Sanjay Mehta,44,Male,B003,Rural,Farmer,22
+Kavitha Rao,27,Female,B002,Urban,Teacher,4
+Bala Subramanian,58,Male,B001,Rural,Farmer,35
+Shanti Devi,69,Female,B003,Rural,Retired,45
+Rahul Nambiar,23,Male,B002,Urban,Student,0
+Uma Krishnan,33,Female,B001,Rural,Farmer,12
+Vijay Chennapatna,63,Male,B003,Rural,Retired,40
+Divya Reddy,24,Female,B002,Urban,Designer,2
+Chandrasekhar,50,Male,B001,Rural,Farmer,30
+Lalita Sharma,66,Female,B002,Rural,Retired,42
+Amit Joshi,30,Male,B003,Urban,Engineer,6
+Geeta Patel,40,Female,B001,Rural,Farmer,20
+Prakash Singh,74,Male,B002,Rural,Retired,52
+Neha Gupta,20,Female,B002,Urban,Student,0
+Murugan Pillai,46,Male,B003,Rural,Farmer,25
+Saraswati Devi,64,Female,B001,Rural,Retired,40
+Aditya Rao,32,Male,B002,Urban,Manager,8
+Vasundhara Iyer,36,Female,B003,Rural,Farmer,15
+Ravi Kumar,57,Male,B001,Rural,Farmer,35
+Anjali Nair,18,Female,B002,Urban,Student,0
+Balakrishnan,73,Male,B003,Rural,Retired,50
+Kamala Krishnan,39,Female,B001,Rural,Farmer,18
+Siddharth Menon,27,Male,B002,Urban,Doctor,4

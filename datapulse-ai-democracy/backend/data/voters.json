@@ -1,0 +1,411 @@
+{
+  "voters": [
+    {
+      "id": 1,
+      "Name": "Ramesh Kumar",
+      "Age": 45,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 2,
+      "Name": "Priya Sharma",
+      "Age": 22,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Student"
+    },
+    {
+      "id": 3,
+      "Name": "Suresh Patel",
+      "Age": 67,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 4,
+      "Name": "Anita Devi",
+      "Age": 35,
+      "Gender": "Female",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 5,
+      "Name": "Vikram Singh",
+      "Age": 28,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Engineer"
+    },
+    {
+      "id": 6,
+      "Name": "Kavita Joshi",
+      "Age": 72,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 7,
+      "Name": "Rajesh Gupta",
+      "Age": 55,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 8,
+      "Name": "Deepa Nair",
+      "Age": 19,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Student"
+    },
+    {
+      "id": 9,
+      "Name": "Mohan Reddy",
+      "Age": 62,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 10,
+      "Name": "Sneha Iyer",
+      "Age": 31,
+      "Gender": "Female",
+      "BoothID": "B003",
+      "Area": "Urban",
+      "Occupation": "Teacher"
+    },
+    {
+      "id": 11,
+      "Name": "Arun Pillai",
+      "Age": 48,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 12,
+      "Name": "Lakshmi Menon",
+      "Age": 68,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 13,
+      "Name": "Karthik Rao",
+      "Age": 25,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Developer"
+    },
+    {
+      "id": 14,
+      "Name": "Meera Krishnan",
+      "Age": 42,
+      "Gender": "Female",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 15,
+      "Name": "Gopal Sharma",
+      "Age": 70,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 16,
+      "Name": "Sunita Verma",
+      "Age": 29,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Nurse"
+    },
+    {
+      "id": 17,
+      "Name": "Venkatesh Iyengar",
+      "Age": 52,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 18,
+      "Name": "Pooja Bhat",
+      "Age": 21,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Student"
+    },
+    {
+      "id": 19,
+      "Name": "Srinivas Murthy",
+      "Age": 65,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 20,
+      "Name": "Rekha Venkat",
+      "Age": 38,
+      "Gender": "Female",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 21,
+      "Name": "Naveen Kumar",
+      "Age": 26,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Accountant"
+    },
+    {
+      "id": 22,
+      "Name": "Indira Govind",
+      "Age": 71,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 23,
+      "Name": "Sanjay Mehta",
+      "Age": 44,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 24,
+      "Name": "Kavitha Rao",
+      "Age": 27,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Teacher"
+    },
+    {
+      "id": 25,
+      "Name": "Bala Subramanian",
+      "Age": 58,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 26,
+      "Name": "Shanti Devi",
+      "Age": 69,
+      "Gender": "Female",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 27,
+      "Name": "Rahul Nambiar",
+      "Age": 23,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Student"
+    },
+    {
+      "id": 28,
+      "Name": "Uma Krishnan",
+      "Age": 33,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 29,
+      "Name": "Vijay Chennapatna",
+      "Age": 63,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 30,
+      "Name": "Divya Reddy",
+      "Age": 24,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Designer"
+    },
+    {
+      "id": 31,
+      "Name": "Chandrasekhar",
+      "Age": 50,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 32,
+      "Name": "Lalita Sharma",
+      "Age": 66,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 33,
+      "Name": "Amit Joshi",
+      "Age": 30,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Urban",
+      "Occupation": "Engineer"
+    },
+    {
+      "id": 34,
+      "Name": "Geeta Patel",
+      "Age": 40,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 35,
+      "Name": "Prakash Singh",
+      "Age": 74,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 36,
+      "Name": "Neha Gupta",
+      "Age": 20,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Student"
+    },
+    {
+      "id": 37,
+      "Name": "Murugan Pillai",
+      "Age": 46,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 38,
+      "Name": "Saraswati Devi",
+      "Age": 64,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 39,
+      "Name": "Aditya Rao",
+      "Age": 32,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Manager"
+    },
+    {
+      "id": 40,
+      "Name": "Vasundhara Iyer",
+      "Age": 36,
+      "Gender": "Female",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 41,
+      "Name": "Ravi Kumar",
+      "Age": 57,
+      "Gender": "Male",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 42,
+      "Name": "Anjali Nair",
+      "Age": 18,
+      "Gender": "Female",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Student"
+    },
+    {
+      "id": 43,
+      "Name": "Balakrishnan",
+      "Age": 73,
+      "Gender": "Male",
+      "BoothID": "B003",
+      "Area": "Rural",
+      "Occupation": "Retired"
+    },
+    {
+      "id": 44,
+      "Name": "Kamala Krishnan",
+      "Age": 39,
+      "Gender": "Female",
+      "BoothID": "B001",
+      "Area": "Rural",
+      "Occupation": "Farmer"
+    },
+    {
+      "id": 45,
+      "Name": "Siddharth Menon",
+      "Age": 27,
+      "Gender": "Male",
+      "BoothID": "B002",
+      "Area": "Urban",
+      "Occupation": "Doctor"
+    }
+  ],
+  "clusters": [],
+  "recommendations": []
+}
