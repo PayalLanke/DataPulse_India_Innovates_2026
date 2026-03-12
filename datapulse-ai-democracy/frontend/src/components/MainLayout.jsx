@@ -97,7 +97,7 @@ export default function MainLayout() {
             <button onClick={toggle} className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">
               {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-            <Button variant="ghost" size="sm" onClick={() => navigate('/login')}>
+            <Button variant="ghost" size="sm" onClick={() => navigate('/login', { replace: true })}>
               <LogOut className="w-4 h-4 mr-2" />
               Logout
             </Button>

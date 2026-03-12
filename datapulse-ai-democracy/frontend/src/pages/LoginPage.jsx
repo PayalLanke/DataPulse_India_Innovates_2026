@@ -7,7 +7,7 @@ import { Shield, User } from 'lucide-react'
 export default function LoginPage() {
   const navigate = useNavigate()
   const [step, setStep] = useState('login') // login | otp
-  const [role, setRole] = useState('admin') // admin | booth
+  const [role, setRole] = useState('officer') // officer | voter
   const [phone, setPhone] = useState('')
   const [otp, setOtp] = useState('')
 
@@ -18,123 +18,189 @@ export default function LoginPage() {
 
   const handleVerify = (e) => {
     e.preventDefault()
-    navigate('/dashboard')
+    if (role === 'officer') {
+      navigate('/dashboard')
+    } else {
+      navigate('/citizen')
+    }
   }
 
   return (
-    <div className="min-h-screen flex">
-      <div className="hidden lg:flex lg:w-1/2 bg-primary-900 p-12 flex-col justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-white">AI Booth Management</h1>
-          <p className="text-primary-200 mt-2">Knowledge Graph Platform</p>
+    <div className="min-h-screen w-full bg-slate-950 text-white flex flex-col lg:flex-row">
+      {/* Left: Visually rich but not busy hero */}
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
+        {/* background glow */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 -left-10 h-64 w-64 rounded-full bg-primary-500/25 blur-3xl" />
+          <div className="absolute bottom-0 -right-16 h-72 w-72 rounded-full bg-emerald-500/20 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-95" />
         </div>
-        <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-primary-700 flex items-center justify-center shrink-0">
-              <Shield className="w-6 h-6 text-primary-300" />
-            </div>
+
+        <div className="relative flex flex-col justify-center px-16 py-12 w-full">
+          <div className="max-w-lg space-y-7">
             <div>
-              <h3 className="font-semibold text-white">Secure Access</h3>
-              <p className="text-primary-200 text-sm mt-1">Role-based authentication with OTP verification</p>
+              <p className="inline-flex items-center gap-2 rounded-full bg-slate-900/70 border border-slate-700 px-3 py-1 text-[11px] tracking-[0.22em] uppercase text-slate-300">
+                Datapulse • AI Democracy
+              </p>
+              <h1 className="mt-4 text-3xl lg:text-4xl font-bold leading-tight">AI Booth Management</h1>
+              <p className="mt-2 text-sm md:text-base text-slate-300">
+                Orchestrate polling booths, officers, and local issues in one simple, secure control panel.
+              </p>
             </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-primary-700 flex items-center justify-center shrink-0">
-              <User className="w-6 h-6 text-primary-300" />
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 flex gap-3 items-start">
+                <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15">
+                  <Shield className="h-5 w-5 text-primary-300" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold">Secure access</h3>
+                  <p className="text-sm text-slate-300 mt-1">
+                    Role-based login with OTP verification for every booth.
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-slate-900/80 border border-slate-800 p-4 flex gap-3 items-start">
+                <div className="mt-1 flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500/15">
+                  <User className="h-5 w-5 text-emerald-300" />
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold">Booth insights</h3>
+                  <p className="text-sm text-slate-300 mt-1">
+                    Keep track of officers and ground reports in real time.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="font-semibold text-white">Booth Intelligence</h3>
-              <p className="text-primary-200 text-sm mt-1">Dynamic voter segmentation and governance updates</p>
+
+            <div className="flex gap-4 text-[11px] text-slate-300">
+              <div className="flex-1 rounded-2xl bg-slate-900/80 border border-slate-800 px-3 py-2">
+                <p className="uppercase tracking-[0.22em] text-slate-500 text-[10px]">Booths onboarded</p>
+                <p className="mt-1 text-xl font-semibold text-white">120+</p>
+              </div>
+              <div className="flex-1 rounded-2xl bg-slate-900/80 border border-slate-800 px-3 py-2">
+                <p className="uppercase tracking-[0.22em] text-slate-500 text-[10px]">Officers live</p>
+                <p className="mt-1 text-xl font-semibold text-white">300+</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex-1 flex items-center justify-center p-8 bg-white dark:bg-slate-900">
+      {/* Right: Polished auth card */}
+      <div className="flex-1 flex items-center justify-center px-6 py-10">
         <div className="w-full max-w-md">
-          <div className="text-center mb-8 lg:hidden">
-            <h1 className="text-2xl font-bold text-primary-600">AI Booth Management</h1>
+          <div className="mb-6 text-center lg:text-left">
+            <p className="text-xs font-medium tracking-[0.25em] text-slate-400 uppercase mb-2">
+              Secure sign-in
+            </p>
+            <h2 className="text-2xl font-semibold text-white">
+              {step === 'login' ? 'Choose how you want to log in' : 'Verify one-time passcode'}
+            </h2>
+            <p className="mt-2 text-sm text-slate-400">
+              {step === 'login'
+                ? 'Select your role and confirm your mobile number to continue.'
+                : `Enter the 6-digit code sent to ${phone || 'your mobile number'}.`}
+            </p>
           </div>
 
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-            {step === 'login' ? 'Welcome back' : 'Verify OTP'}
-          </h2>
-          <p className="text-slate-500 dark:text-slate-400 mb-6">
-            {step === 'login'
-              ? 'Sign in to access the platform'
-              : `Enter the 6-digit code sent to ${phone}`}
-          </p>
-
-          {step === 'login' ? (
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Login as</label>
-                <div className="flex gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setRole('admin')}
-                    className={`flex-1 py-3 rounded-lg border-2 font-medium transition ${
-                      role === 'admin'
-                        ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300'
-                        : 'border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-400 hover:border-slate-300'
-                    }`}
-                  >
-                    Admin
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setRole('booth')}
-                    className={`flex-1 py-3 rounded-lg border-2 font-medium transition ${
-                      role === 'booth'
-                        ? 'border-primary-600 bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300'
-                        : 'border-slate-200 dark:border-slate-600 text-slate-600 dark:text-slate-400 hover:border-slate-300'
-                    }`}
-                  >
-                    Booth Officer
-                  </button>
-                </div>
+          <div className="relative rounded-3xl bg-gradient-to-br from-sky-500/40 via-slate-800 to-emerald-500/40 p-[1px] shadow-[0_22px_65px_rgba(15,23,42,0.9)]">
+            <div className="rounded-[1.4rem] bg-slate-950/95 border border-slate-800/80 p-6 space-y-6">
+              <div className="flex items-center justify-between text-[11px] text-slate-400">
+                <span className="inline-flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>
+                    {role === 'officer'
+                      ? 'Officer login • Admin dashboard view'
+                      : 'Voter login • Citizen portal view'}
+                  </span>
+                </span>
+                <span className="hidden sm:inline">
+                  Step {step === 'login' ? '1' : '2'} of 2
+                </span>
               </div>
-              <Input
-                label="Mobile Number"
-                type="tel"
-                placeholder="Enter 10-digit mobile number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-              <Button type="submit" className="w-full" size="lg">
-                Send OTP
-              </Button>
-            </form>
-          ) : (
-            <form onSubmit={handleVerify} className="space-y-4">
-              <div className="flex gap-2">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <input
-                    key={i}
-                    type="text"
-                    maxLength={1}
-                    className="w-12 h-14 text-center text-xl font-bold rounded-lg border-2 border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none"
-                    value={otp[i - 1] || ''}
-                    onChange={(e) => {
-                      const v = e.target.value.replace(/\D/g, '')
-                      setOtp((prev) => (prev.slice(0, i - 1) + v + prev.slice(i)).slice(0, 6))
-                    }}
+              {step === 'login' ? (
+                <form onSubmit={handleLogin} className="space-y-5">
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-200 mb-2">Login type</label>
+                    <div className="flex gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setRole('officer')}
+                        className={`flex-1 py-3 rounded-xl border text-sm font-medium transition ${
+                          role === 'officer'
+                            ? 'border-primary-500 bg-primary-500/15 text-primary-100 shadow-[0_0_0_1px_rgba(56,189,248,0.4)]'
+                            : 'border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-slate-900'
+                        }`}
+                      >
+                        Officer Login
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setRole('voter')}
+                        className={`flex-1 py-3 rounded-xl border text-sm font-medium transition ${
+                          role === 'voter'
+                            ? 'border-emerald-500 bg-emerald-500/15 text-emerald-100 shadow-[0_0_0_1px_rgba(16,185,129,0.4)]'
+                            : 'border-slate-700 text-slate-300 hover:border-slate-500 hover:bg-slate-900'
+                        }`}
+                      >
+                        Voter Login
+                      </button>
+                    </div>
+                  </div>
+                  <Input
+                    label="Mobile Number"
+                    type="tel"
+                    placeholder="Enter 10-digit mobile number"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
                   />
-                ))}
-              </div>
-              <Button type="submit" className="w-full" size="lg">
-                Verify & Sign In
-              </Button>
-              <button
-                type="button"
-                onClick={() => setStep('login')}
-                className="w-full text-sm text-slate-500 hover:text-primary-600"
-              >
-                Change number
-              </button>
-            </form>
-          )}
+                  <div className="flex items-center justify-between text-[11px] text-slate-500">
+                    <span>OTP will be sent via SMS.</span>
+                    <span className="inline-flex items-center gap-1">
+                      <Shield className="h-3 w-3 text-primary-300" />
+                      <span>Encrypted</span>
+                    </span>
+                  </div>
+                  <Button type="submit" className="w-full" size="lg">
+                    Send OTP
+                  </Button>
+                </form>
+              ) : (
+                <form onSubmit={handleVerify} className="space-y-5">
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-200 mb-3">Enter 6-digit OTP</label>
+                    <div className="flex gap-2 justify-between">
+                      {[1, 2, 3, 4, 5, 6].map((i) => (
+                        <input
+                          key={i}
+                          type="text"
+                          maxLength={1}
+                          className="w-10 h-12 sm:w-12 sm:h-12 text-center text-lg font-semibold rounded-lg border-2 border-slate-700 bg-slate-900 text-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500/50 outline-none"
+                          value={otp[i - 1] || ''}
+                          onChange={(e) => {
+                            const v = e.target.value.replace(/\D/g, '')
+                            setOtp((prev) => (prev.slice(0, i - 1) + v + prev.slice(i)).slice(0, 6))
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  <Button type="submit" className="w-full" size="lg">
+                    Verify &amp; Sign In
+                  </Button>
+                  <button
+                    type="button"
+                    onClick={() => setStep('login')}
+                    className="w-full text-xs sm:text-sm text-slate-400 hover:text-primary-300"
+                  >
+                    Change mobile number
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
